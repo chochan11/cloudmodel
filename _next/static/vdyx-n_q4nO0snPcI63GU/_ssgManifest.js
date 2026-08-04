@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[subjectCode]","\u002Fs1\u002F[group]","\u002Fs2\u002F[group]","\u002Fs4\u002F[branch]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

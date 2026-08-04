@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2 Answer Keys | KTUNOTES.LIVE</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --text: #1a202c;
+            --muted: #4a5568;
+            --accent: #1e90ff;
+            --success: #10b981;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --nav-bg: rgba(255, 255, 255, 0.7);
+            --shadow: rgba(31, 38, 135, 0.07);
+        }
+
+        .dark {
+            --bg: #080b10;
+            --text: #f7fafc;
+            --muted: #a0aec0;
+            --accent: #4aa3ff;
+            --success: #34d399;
+            --glass-bg: rgba(17, 25, 40, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --nav-bg: rgba(8, 11, 16, 0.75);
+            --shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            transition: background 0.4s ease;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(30, 144, 255, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(30, 144, 255, 0.05) 0px, transparent 50%);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Navbar Optimization */
+        .navbar { 
+            background: var(--nav-bg); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 10px 0; 
+            display: flex; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 30px var(--shadow);
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        .navbar .logo { 
+            font-family: 'Poppins', sans-serif; 
+            font-size: 1.2rem; 
+            font-weight: 900; 
+            color: var(--accent); 
+            text-decoration: none; 
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: 10px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 2rem 1rem; 
+        }
+
+        header h1 {
+            font-family: 'Poppins'; 
+            font-size: 2rem; 
+            margin-bottom: 8px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid var(--success);
+            padding-left: 12px;
+        }
+
+        /* Responsive Answer Cards */
+        .answer-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px 0 var(--shadow);
+            transition: 0.3s;
+        }
+
+        .info h3 { 
+            margin: 0; 
+            font-size: 1.1rem; 
+            color: var(--text); 
+        }
+
+        .info p { 
+            margin: 4px 0 0; 
+            color: var(--muted); 
+            font-size: 0.85rem; 
+        }
+
+        .btn-view {
+            background: var(--success);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Breakpoints */
+        @media (max-width: 650px) {
+            header h1 { font-size: 1.75rem; }
+            
+            .answer-card { 
+                flex-direction: column; 
+                text-align: center; 
+                gap: 15px; 
+                padding: 15px;
+            }
+
+            .btn-view { 
+                width: 100%; 
+                justify-content: center; 
+                box-sizing: border-box;
+            }
+
+            .section-title { font-size: 1.25rem; }
+        }
+
+        .footer { text-align: center; padding: 30px; color: var(--muted); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">KTUNOTES.LIVE</a>
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 2rem;">
+            <h1>Solved Answer Keys</h1>
+            <p style="color: var(--muted);">S2 University Model Questions - Solved</p>
+        </header>
+
+        <h2 class="section-title"><i class="fas fa-layer-group"></i> GROUP A</h2>
+        
+        <div class="answer-card">
+            <div class="info">
+                <h3>Mathematics for Info. Science-2</h3>
+                <p>Solved Paper | 2024 Scheme</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1ATiaf2DqeY27OuHIHbUZFjoQofUfW4bA/view?usp=sharing" target="_blank" class="btn-view">
+                <i class="fas fa-file-signature"></i> View Solution
+            </a>
+        </div>
+
+        <div class="answer-card">
+            <div class="info">
+                <h3>Discrete Mathematics (DMS)</h3>
+                <p>Solved Paper | Group A</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1f8NoQV4v5lPqWPjtBJV08V7_IxOWL-9x/view?usp=drive_link" target="_blank" class="btn-view">
+                <i class="fas fa-file-signature"></i> View Solution
+            </a>
+        </div>
+
+        <div class="answer-card">
+            <div class="info">
+                <h3>Fundamentals of Computing (FOC)</h3>
+                <p>Solved Paper | Group A</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1Ameicmtv99gnqiIznLzQSCN8mEhg_M22/view?usp=drive_link" target="_blank" class="btn-view">
+                <i class="fas fa-file-signature"></i> View Solution
+            </a>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 ktunotes.live | Study Portal</p>
+    </footer>
+
+    <script>
+        const savedTheme = localStorage.getItem('ktu_glass_theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>

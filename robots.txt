@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://model.ktunotes.live/sitemap.xml
